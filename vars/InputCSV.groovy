@@ -3,12 +3,13 @@ import java.util.stream.*
 @NonCPS
 def call()
 {
-
+println "first line"
 String[] HEADERS = ["AppID","AppName","Environment","ReleaseVersion","Status"]
 String header="App ID,App Name,Release Version,Environments Passed,Environment Failed,Comments";
 
 //Reader filereader = new FileReader("D:\\Demo-Pipeline\\CSV-Jenkins\\Input.csv");
 Reader filereader = new FileReader("$WORKSPACE\\Input_CaseStudy.csv");
+println "after file read"
 Iterable<CSVRecord> records = CSVFormat.DEFAULT
 		.withHeader(HEADERS)
 		.withFirstRecordAsHeader()
