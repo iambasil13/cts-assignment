@@ -1,4 +1,4 @@
-import org.apache.commons.csv.*
+import org.apache.commons.csv.CSVFormat
 import java.util.stream.*
 @NonCPS
 def call()
